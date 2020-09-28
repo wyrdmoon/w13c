@@ -1,8 +1,14 @@
 <template>
     <div>
+        <play-list>
         <h1>PLAYLIST</h1>
+        
+        </div>
 
-    </div>
+
+       
+  
+
 </template>
 
 <script>
@@ -28,10 +34,10 @@ import songs from './song-list.vue'
             courses: function() {
                 return this.$store.state.songs; 
             }
-        }
+        },
 
         
-    }
+    };
     
    
 </script>

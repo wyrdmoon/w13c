@@ -11,6 +11,8 @@ import PageBody from "./components/page-body.vue";
 import SongList from "./components/song-list.vue";
 import PlayList from "./components/play-list.vue";
 
+
+
 export default {
   name: "App",
   components: {
@@ -18,7 +20,7 @@ export default {
     SongList,
     PlayList,
    
-  }
+  },
 };
 </script>
 

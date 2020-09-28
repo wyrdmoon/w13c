@@ -1,6 +1,14 @@
 <template>
     
-<div id="song"></div>
+<div>
+<song-list>
+    <h2> {{ song }} </h2>
+
+    <h3> {{ artist }} </h3>
+
+
+</song-list>
+</div>
   
 
 
@@ -13,10 +21,10 @@ export default {
         return{
             SongList: this.$store.state.SongList,
             
-        }
+        };
 
-    }
-}
+    },
+};
 </script>
 
 <style scoped>

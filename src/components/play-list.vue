@@ -22,15 +22,17 @@
         
         data:function(){
             return {
+                playlist: this.$store.state.playlist,
                 
             };
         },
+      
         
 
 
         computed: {
             songs: function() {
-                return this.$store.state.playlist 
+                return this.$store.state.playlist;
             }
         },
 

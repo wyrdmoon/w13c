@@ -39,7 +39,9 @@ export default new Vuex.Store({
 
 
   ],
-  playlist: []
+  playlist: [
+    
+  ],
 
   
 
@@ -55,8 +57,8 @@ export default new Vuex.Store({
   
 
   getters: {
-    songlist: function(state){
-      return state.song.push.toSongs();
+    songlist: function(state, addSong){
+      return state.song.push.playlist(addSong);
     }
   },
 });

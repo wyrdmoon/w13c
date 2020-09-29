@@ -1,12 +1,8 @@
 <template>
 <div>
-  <page-body></page-body>
-<h2>{{ song }}</h2>
+ <song-list></song-list>
+ <play-list></play-list>
 
-<button @click="addToPlayList" v-if="!isplaylist">add to playlist</button>
-<button @click="removefromplaylist" v-else>remove from playlist</button>
-<button @click="addToPlayList (song)" v-if="!isplaylist">add to playlist</button>
-<button @click="removefromplaylist(song)" v-else>remove from playlist</button>
 </div>
 
 
@@ -14,8 +10,8 @@
 
 <script>
 
-import SongList from "./components/song-list.vue";
-import PlayList from "./components/play-list.vue";
+import SongList from "./song-list.vue";
+import PlayList from "./play-list.vue";
 
  
 
@@ -25,9 +21,8 @@ export default {
   
   SongList,
   PlayList,
+ },
  
-
-  }
 };
 </script>
 

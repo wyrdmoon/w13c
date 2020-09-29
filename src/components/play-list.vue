@@ -1,8 +1,9 @@
 <template>
     <div>
-        <play-list>
-        <h1>PLAYLIST</h1>
-        
+      
+        <h1> PLAYLIST </h1>
+<h4  v-for="song in songs" :key="song.id">{{ song.artist }}</h4>
+
         </div>
 
 
@@ -12,27 +13,24 @@
 </template>
 
 <script>
-import { component } from 'vue/types/umd'
-import songs from './song-list.vue'
+
+
 
 
     export default {
         name: "PlayList",
-        components: {
-            songs
-        },
+        
         data:function(){
             return {
-                songs : this.$store.state.songs
-            }
+                
+            };
         },
-        name: "song-list",
-        components: {
-            songs
-        },
+        
+
+
         computed: {
-            courses: function() {
-                return this.$store.state.songs; 
+            songs: function() {
+                return this.$store.state.playlist 
             }
         },
 

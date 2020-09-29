@@ -4,57 +4,68 @@ import Vuex from "vuex";
 Vue.use(Vuex);
 
 export default new Vuex.Store({
-  state: [
-    songlist[
+  state: {
+    songlist: [
     {
       artist: "The Doors",
-      song: "Light My Fire"
+      song: "Light My Fire",
+      id:1
     },
 
     {
       artist: "AC/DC",
-      song: "Money Talks"
+      song: "Money Talks",
+      id:2
     },
 
     {
       artist: "Prince and the Revolution",
-      song: "Purple Rain"
+      song: "Purple Rain",
+      id:3
     },
 
     {
       artist: "Hole in the Sky",
-      song: "Black Sabbath"
+      song: "Black Sabbath",
+      id:4
     },
 
     {
       artist: "Pantera",
-      song: "Planet Caravan"
+      song: "Planet Caravan",
+      id:5
+    },
+   
+
+
+  ],
+  playlist: []
+
+  
+
+
+  },
+  mutations: {
+    toPlayList: function(state, addSong) {
+      state.playlist.push(addSong)
+
+     
+     
+     
+     
     }
+  },
+  
 
-  ] 
-
-],
-mutations: {
-  toplaylist: function (state, addedSong) {
-    state.playSongs.push(addedSong);
-    for (let i = 0; i <state.songs.length; i++) {
-      if (state.songs[i] == addedSong) (
-        state.songs.splice(i, 1)
-      )
+  getters: {
+    songlist: function(state){
+      return state.quote.toPlayList();
     }
-  }
-  }
-},
-fromplaylist, function (state, deleteSong){
+  },
+})
 
-state.songs.push(deleteSong);
-for (let i = 0; i <state.playSongs.length; i++) {
-  if (state.playSongs[1] == deleteSong) {
-    state.playSongs.splice(i, 1);
-  }
-} 
    
 
   
  
-});
+

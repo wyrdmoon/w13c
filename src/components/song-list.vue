@@ -1,28 +1,39 @@
 <template>
     
 <div>
-<song-list>
-    <h2> {{ song }} </h2>
+    <h2> Songs </h2>
+    <h4 @click="addToPlayList(song)" v-for="song in songlist" :key="song.id">{{ song.artist }}</h4>
 
-    <h3> {{ artist }} </h3>
-
-
-</song-list>
 </div>
+
+
+
+
+
   
 
 
 </template>
 
 <script>
+
+
+
+
 export default {
     name: "SongList",
     data: function() {
         return{
-            SongList: this.$store.state.SongList,
+            songlist: this.$store.state.songlist,
             
         };
+        
 
+    },
+    methods: {
+        addToPlayList(addSong) {
+             this.$store.commit('toPlayList', addSong)
+        }
     },
 };
 </script>

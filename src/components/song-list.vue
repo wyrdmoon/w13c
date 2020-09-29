@@ -3,6 +3,7 @@
 <div>
     <h2> Songs </h2>
     <h4 @click="addToPlayList(song)" v-for="song in songlist" :key="song.id">{{ song.artist }}</h4>
+   
 
 </div>
 
@@ -26,7 +27,7 @@ export default {
         return{
             songlist: this.$store.state.songlist,
             
-        };
+        }
         
 
     },
@@ -34,8 +35,10 @@ export default {
         addToPlayList(addSong) {
              this.$store.commit('toPlayList', addSong)
         }
+        
     },
-};
+    
+}
 </script>
 
 <style scoped>

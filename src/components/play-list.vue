@@ -2,7 +2,7 @@
     <div>
       
         <h1> PLAYLIST </h1>
-<h4  v-for="song in songs" :key="song.id">{{ song.artist }}</h4>
+    <h4 @click="addToSongList(song)" v-for="song in songs" :key="song.id">{{ song.artist }}</h4>
 
         </div>
 

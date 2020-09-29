@@ -25,8 +25,8 @@ export default new Vuex.Store({
     },
 
     {
-      artist: "Hole in the Sky",
-      song: "Black Sabbath",
+      artist: "Black Sabbath",
+      song: "Hole in the Sky",
       id:4
     },
 
@@ -47,22 +47,19 @@ export default new Vuex.Store({
   },
   mutations: {
     toPlayList: function(state, addSong) {
-      state.playlist.push(addSong)
+      state.playlist.push(addSong);     
+},
 
-     
-     
-     
-     
-    }
-  },
+
+},
   
 
   getters: {
     songlist: function(state){
-      return state.quote.toPlayList();
+      return state.song.push.toSongs();
     }
   },
-})
+});
 
    
 
